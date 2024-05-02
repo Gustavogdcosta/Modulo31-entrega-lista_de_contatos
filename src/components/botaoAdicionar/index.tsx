@@ -1,5 +1,5 @@
 import { Circulo } from './styleBotaoAdicionar'
 
-const BotaoAdicionar = () => <Circulo href="#"> + </Circulo>
+const BotaoAdicionar = () => <Circulo to="novocard"> + </Circulo>
 
 export default BotaoAdicionar

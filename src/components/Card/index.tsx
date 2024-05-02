@@ -4,12 +4,12 @@ import CardContainer, {
   BotaoCancelar,
   BotaoEditar,
   BotaoExcluir,
-  BotaoSalvar,
   Descricao,
   InfoContainer
 } from './styleCard'
-import { useState } from 'react'
-import { editar } from '../../store/reducers/reducerCard'
+import { useEffect, useState } from 'react'
+import { editar, remover } from '../../store/reducers/reducerCard'
+import { BotaoSalvar } from '../../styles'
 
 type Props = CardTemplate
 
@@ -23,6 +23,12 @@ const Card = ({
   const [estaEditando, setEstaeditando] = useState(false)
   const [telefone, setTelefone] = useState('')
   const [email, setEmail] = useState('')
+
+  useEffect(() => {
+    if (telefoneOriginal.length > 0) {
+      setTelefone(telefoneOriginal)
+    }
+  }, [telefoneOriginal])
 
   function cancelaEdicao() {
     setEstaeditando(false)
@@ -67,7 +73,9 @@ const Card = ({
           <BotaoEditar onClick={() => setEstaeditando(true)}>
             Editar
           </BotaoEditar>
-          <BotaoExcluir> Excluir </BotaoExcluir>
+          <BotaoExcluir onClick={() => dispatch(remover(id))}>
+            Excluir
+          </BotaoExcluir>
         </>
       )}
     </CardContainer>

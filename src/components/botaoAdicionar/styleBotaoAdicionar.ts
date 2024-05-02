@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import cores from '../../styles/cores'
+import { Link } from 'react-router-dom'
 
-export const Circulo = styled.a`
+export const Circulo = styled(Link)`
   height: 64px;
   width: 64px;
   background-color: ${cores.verde};

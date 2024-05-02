@@ -11,20 +11,18 @@ const CardContainer = styled.div`
   }
 `
 
-export const InfoContainer = styled.div`
+export const InfoContainer = styled.form`
   display: flex;
   justify-content: space-between;
   margin: 16px 24px;
 `
 
-export const Descricao = styled.textarea`
+export const Descricao = styled.input`
   color: ${cores.preto};
   font-size: 20px;
   line-height: 24px;
-  display: block;
   width: 100%;
   margin-top: 16px;
-  resize: none;
   border: none;
   background-color: transparent;
 `
@@ -44,9 +42,6 @@ export const BotaoEditar = styled(Botao)`
 `
 export const BotaoExcluir = styled(Botao)`
   background-color: ${cores.vermelho};
-`
-export const BotaoSalvar = styled(Botao)`
-  background-color: ${cores.verde};
 `
 
 export const BotaoCancelar = styled(Botao)`

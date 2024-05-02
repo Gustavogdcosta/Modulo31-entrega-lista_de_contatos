@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import Cardreducer from './reducers/reducerCard'
+import filtroReducer from './reducers/filtro'
 
 const store = configureStore({
   reducer: {
-    Card: Cardreducer
+    Card: Cardreducer,
+    filtro: filtroReducer
   }
 })
 
