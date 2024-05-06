@@ -30,6 +30,12 @@ const Card = ({
     }
   }, [telefoneOriginal])
 
+  useEffect(() => {
+    if (emailoriginal.length > 0) {
+      setEmail(emailoriginal)
+    }
+  }, [emailoriginal])
+
   function cancelaEdicao() {
     setEstaeditando(false)
     setTelefone(telefoneOriginal)
@@ -41,12 +47,12 @@ const Card = ({
       <h2>{nome}</h2>
       <InfoContainer>
         <Descricao
-          value={telefoneOriginal}
-          onChange={(e) => setTelefone(e.target.value)}
+          value={telefone}
+          onChange={(evento) => setTelefone(evento.target.value)}
         />
         <Descricao
-          value={emailoriginal}
-          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          onChange={(evento) => setEmail(evento.target.value)}
         />
       </InfoContainer>
       {estaEditando ? (

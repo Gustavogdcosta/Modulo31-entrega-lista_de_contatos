@@ -10,6 +10,7 @@ const EstiloGlobal = createGlobalStyle`
     border-sizing: border-box;
     font-family: Roboto, sans-serif;
     list-style: none;
+    word-break: break-all;
   }
 `
 export const Container = styled.div`

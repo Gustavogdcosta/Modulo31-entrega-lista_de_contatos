@@ -25,6 +25,7 @@ export const Descricao = styled.input`
   margin-top: 16px;
   border: none;
   background-color: transparent;
+  word-break: break-all;
 `
 
 export const Botao = styled.button`
